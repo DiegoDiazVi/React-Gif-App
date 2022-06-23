@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test a GifGridItem Debe de hacer match con el snapshot 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="Soy un gif"
+      src="https://gif.com/titulo.jpg"
+    />
+    <p>
+      Soy un gif
+    </p>
+  </div>
+</div>
+`;
