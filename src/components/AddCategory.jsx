@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types';
 import React, { Fragment, useState } from 'react';
 
 export const AddCategory = ({onNewCategory, onDeleteCategories}) => {
@@ -25,7 +26,7 @@ export const AddCategory = ({onNewCategory, onDeleteCategories}) => {
     
     return (
         <Fragment>
-            <form className='form-container' onSubmit={ onSubmit }>
+            <form aria-label='form' className='form-container' onSubmit={ onSubmit }>
                 <input 
                     type="text"
                     placeholder = 'Buscar gifs' 
@@ -38,4 +39,8 @@ export const AddCategory = ({onNewCategory, onDeleteCategories}) => {
             </div>
         </Fragment>
     )
+}
+
+AddCategory.propTypes = {
+    onNewCategory: PropTypes.func.isRequired,
 }
