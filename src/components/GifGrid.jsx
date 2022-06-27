@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import { GifGridItem } from './GifGridItem';
 import { useFetchGifs } from '../hooks/useFetchGifs';
+import { PropTypes } from 'prop-types';
 
 //recibe la propiedad categoria o el nombre del input
 export const GifGrid = ({category}) => {
@@ -14,7 +15,7 @@ export const GifGrid = ({category}) => {
             {/* Nombre de la categoria */}
             <h3>{category}</h3>
             {
-                isLoading && <h2>Carganado gifs</h2>
+                isLoading && <h2>Cargando gifs</h2>
             }
             {/* Importante para nombrar clases no se usa class='clase' sino className='clase' */}
             <div className='card-grid'>
@@ -35,4 +36,8 @@ export const GifGrid = ({category}) => {
             </div>
         </Fragment>
     )
+}
+
+GifGrid.propTypes = {
+    category : PropTypes.string.isRequired
 }
